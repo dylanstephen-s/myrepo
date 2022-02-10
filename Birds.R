@@ -34,5 +34,5 @@ tail(group_size)
 
 # yah yah yah
 summary(birds)
-barplot(species_count, species_group, data = group_size)
-?barplot
+barplot(species_count ~ species_group, data = group_size)
+
