@@ -20,7 +20,7 @@ any(is.na(birds$species_group))
 any(is.na(birds$primary_com_name))
 
 # Count species in each species group
-group_size <- birds %>%
+grouped_birds <- group_size <- birds %>%
   group_by(species_group) %>%
   summarize(species_count = n()) %>%
   arrange(-species_count) %>%
@@ -31,3 +31,8 @@ group_size
 
 # What are the smallest species groups?
 tail(group_size)
+
+# yah yah yah
+summary(birds)
+barplot(species_count, species_group, data = group_size)
+?barplot
